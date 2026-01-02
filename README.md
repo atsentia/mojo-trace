@@ -203,7 +203,7 @@ This is a **minimal OTLP-compatible** implementation (~2000 LOC) vs full OpenTel
 
 ## License
 
-MIT
+Apache 2.0
 
 ## Part of mojo-contrib
 
