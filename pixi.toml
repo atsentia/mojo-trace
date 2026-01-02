@@ -1,0 +1,21 @@
+[project]
+name = "mojo-trace"
+version = "0.1.0"
+description = "Pure Mojo distributed tracing library compatible with OpenTelemetry"
+authors = ["Enterprise Search Team"]
+channels = ["conda-forge", "https://conda.modular.com/max"]
+platforms = ["osx-arm64", "linux-64"]
+
+[dependencies]
+max = ">=24.6,<25"
+
+[feature.dev.dependencies]
+httpx = ">=0.26.0"
+
+[environments]
+default = { features = [], solve-group = "default" }
+dev = { features = ["dev"], solve-group = "default" }
+
+[tasks]
+test = "mojo test tests/"
+build = "mojo build src/__init__.mojo -o mojo_trace"
